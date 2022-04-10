@@ -11,8 +11,11 @@ import java.util.List;
 public interface MenuService extends IService<MenuEntity> {
 
     /**
+     * todo
      * 取得该角色的所有权限菜单
      * @return
      */
     public List<MenuEntity> getAllMenusWithRole();
+
+
 }

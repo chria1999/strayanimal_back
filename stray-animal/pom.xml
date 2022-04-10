@@ -75,6 +75,12 @@
     </dependencies>
 
     <build>
+        <resources>
+            <!-- mapper.xml放置目录 -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

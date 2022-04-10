@@ -48,5 +48,4 @@ public class MenuEntity {
 
     @ApiModelProperty(notes = "meta属性")
     private Meta meta;
-
 }

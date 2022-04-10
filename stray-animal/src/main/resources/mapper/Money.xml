@@ -3,6 +3,7 @@
 
 <mapper namespace="com.lqa.strayanimal.mapper.MoneyMapper">
 
+    <!-- todo 需要优化-->
     <select id="getMoneyByPage" resultMap="com.lqa.strayanimal.entity.MoneyEntity">
         select *
         from money

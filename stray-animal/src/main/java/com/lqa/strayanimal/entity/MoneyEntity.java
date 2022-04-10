@@ -6,7 +6,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.util.Date;
 
 /**
  * @author 10411
@@ -25,20 +24,10 @@ public class MoneyEntity {
     @ApiModelProperty(notes = "支出/收入")
     private String pipe;
 
-    @ApiModelProperty(notes = "操作员")
-    private String operator;
 
-    @ApiModelProperty(notes = "审核员")
-    private String auditor;
+    @ApiModelProperty(notes = "类型")
+    private String type;
 
-    @ApiModelProperty(notes = "状态")
-    private String status;
-
-    @ApiModelProperty(notes = "操作时间")
-    private Date addDate;
-
-    @ApiModelProperty(notes = "审核时间")
-    private Date auditDate;
 
     @ApiModelProperty(notes = "备注")
     private String info;

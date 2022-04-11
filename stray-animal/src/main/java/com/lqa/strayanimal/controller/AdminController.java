@@ -30,10 +30,7 @@ public class AdminController {
     @GetMapping("/")
     @ApiOperation(value = "返回所有管理员")
     public List<AdminEntity> getAllAdmins(String keywords) {
-        /**
-         * todo
-         */
-        return null;
+        return adminService.getAllAdmins(keywords);
     }
 
     @PutMapping("/")

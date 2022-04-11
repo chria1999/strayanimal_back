@@ -3,7 +3,6 @@ package com.lqa.strayanimal.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lqa.strayanimal.entity.AdminEntity;
-import com.lqa.strayanimal.entity.RoleEntity;
 import com.lqa.strayanimal.mapper.AdminMapper;
 import com.lqa.strayanimal.mapper.AdminRoleMapper;
 import com.lqa.strayanimal.service.AdminService;
@@ -39,7 +38,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, AdminEntity> impl
 
     @Override
     public Integer updateAdmin(AdminEntity adminEntity) {
-        return adminMapper.update(adminEntity, new LambdaQueryWrapper<>());
+        return adminMapper.updateById(adminEntity);
     }
 
     @Override

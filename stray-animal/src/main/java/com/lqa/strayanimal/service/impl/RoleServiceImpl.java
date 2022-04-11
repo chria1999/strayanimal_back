@@ -35,7 +35,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, RoleEntity> impleme
 
     @Override
     public Integer updateRole(RoleEntity roleEntity) {
-        return roleMapper.update(roleEntity, new LambdaQueryWrapper<>());
+        return roleMapper.updateById(roleEntity);
     }
 
     @Override

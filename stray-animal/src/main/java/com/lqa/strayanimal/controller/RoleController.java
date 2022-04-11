@@ -14,20 +14,20 @@ import java.util.List;
  * @author 10411
  */
 @RestController
-@RequestMapping("/sys/role")
+@RequestMapping("/system/basic/role")
 @Api(tags = "角色")
 public class RoleController {
 
     @Autowired
     private RoleService roleService;
 
-    @GetMapping("/get")
+    @GetMapping("/")
     @ApiOperation(value = "取得所有角色")
     public List<RoleEntity> getAllRoles() {
         return roleService.getAllRoles();
     }
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @ApiOperation(value = "添加角色")
     public RespBean addRole(@RequestBody RoleEntity roleEntity) {
         if (roleService.addRole(roleEntity) == 1) {
@@ -36,7 +36,7 @@ public class RoleController {
         return RespBean.error("添加失败");
     }
 
-    @PutMapping("/update")
+    @PutMapping("/")
     @ApiOperation(value = "更新角色")
     public RespBean updateRole(@RequestBody RoleEntity roleEntity) {
         if (roleService.updateRole(roleEntity) == 1) {
@@ -45,7 +45,7 @@ public class RoleController {
         return RespBean.error("更新失败");
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     @ApiOperation(value = "删除某一个角色")
     public RespBean deleteRoleById(@PathVariable("id") Integer id) {
         if (roleService.deleteRoleById(id) == 1) {
@@ -54,7 +54,7 @@ public class RoleController {
         return RespBean.error("删除失败");
     }
 
-    @DeleteMapping("/delete/selected")
+    @DeleteMapping("/")
     @ApiOperation(value = "删除选定角色")
     public RespBean deleteRolesByIds(Integer[] ids) {
         if (roleService.deleteRolesByIds(ids) == ids.length) {

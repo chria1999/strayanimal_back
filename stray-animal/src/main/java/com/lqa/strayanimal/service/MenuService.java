@@ -17,5 +17,32 @@ public interface MenuService extends IService<MenuEntity> {
      */
     public List<MenuEntity> getAllMenusWithRole();
 
+    /**
+     * 返回菜单
+     * @return
+     */
+    public List<MenuEntity> getMenuById();
+
+    /**
+     * 返回所有菜单
+     * @return
+     */
+    public List<MenuEntity> getAllMenus();
+
+    /**
+     * 取得该角色菜单
+     * @param roleId
+     * @return
+     */
+    public List<Integer> getMenuIdByRoleId(Integer roleId);
+
+
+    /**
+     * 更新角色菜单
+     * @param roleId
+     * @param menuIds
+     * @return
+     */
+    public boolean updateMenuRole(Integer roleId, Integer[] menuIds);
 
 }
